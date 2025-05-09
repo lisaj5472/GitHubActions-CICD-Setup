@@ -16,11 +16,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: 18
 
       - name: Install dependencies (root, server, client)
         run: npm run install
 
       - name: Run Cypress Component Tests
         run: npm run test-component
-# comment for testing
