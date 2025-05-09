@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
-    /* Modules */
+    "target": "ES2020",
+    "module": "ESNext",
     "rootDir": "src",
     "outDir": "dist",
-
-    /* Relax TypeScript strictness for server build */
+    "moduleResolution": "Bundler",
+    "strict": false,
     "skipLibCheck": true,
     "noEmitOnError": false,
-    "strict": false,
-    "noUnusedLocals": false,
-    "noImplicitReturns": false,
-    "checkJs": false
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["src"],
   "typeRoots": ["./node_modules/@types", "./src/types"]
