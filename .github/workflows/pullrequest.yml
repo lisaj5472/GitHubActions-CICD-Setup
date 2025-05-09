@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies (root, server, client)
         run: npm run install
 
-      -name: Install ts-node and dependencies
+      - name: Install ts-node and dependencies
         run: |
           npm install ts-node typescript
           npm install cypress
