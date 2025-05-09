@@ -1,0 +1,25 @@
+name: Run Cypress Component Tests on PR to Develop
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  cypress-component-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Install dependencies (root, server, client)
+        run: npm run install
+
+      - name: Run Cypress Component Tests
+        run: npm run test-component
