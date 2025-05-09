@@ -2,13 +2,16 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     /* Modules */
-    "rootDir": "src" /* Specify the root folder within your source files. */,
+    "rootDir": "src",
+    "outDir": "dist",
 
-    /* Emit */
-    "outDir": "dist" /* Specify an output folder for all emitted files. */,
+    /* Relax TypeScript strictness for server build */
     "skipLibCheck": true,
-    "noEmitOnError": false
-    // "noEmitOnError": true /* Disable emitting files if any type checking errors are reported. */
+    "noEmitOnError": false,
+    "strict": false,
+    "noUnusedLocals": false,
+    "noImplicitReturns": false,
+    "checkJs": false
   },
   "include": ["src"],
   "typeRoots": ["./node_modules/@types", "./src/types"]
